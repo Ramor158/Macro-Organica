@@ -1,0 +1,24 @@
+F11-crear modulo
+
+
+
+
+Sub eliminarfilas()
+    Dim ultfila As Long
+    Dim cont As Long
+    
+    ultfila = Range("a" & Rows.Count).End(xlUp).Row
+    
+    For cont = 4 To ultfila
+         If Cells(cont, 18) <> "0" And Cells(cont, 19) = "0" And Cells(cont, 20) = "0" And Cells(cont, 21) < "20" And Cells(cont, 22) = "0" And Cells(cont, 23) < "2" And Cells(cont, 24) = "0" Then
+             Rows(cont).Delete
+             cont = cont - 1
+         End If
+    Next cont
+    MsgBox "proceso terminado"
+    
+    
+End Sub
+
+
+
